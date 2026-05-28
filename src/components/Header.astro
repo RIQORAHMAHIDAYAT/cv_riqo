@@ -12,7 +12,7 @@ import { stripBase, stripLocale } from "@/utils/withBase";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
 
-const { site, features } = config;
+const { features } = config;
 
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
@@ -50,9 +50,11 @@ const isActive = (path: string) => {
   >
     <a
       href={getRelativeLocaleUrl(locale, "")}
-      class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+      class="absolute py-1 whitespace-nowrap sm:static sm:my-auto transition-transform duration-200 hover:scale-105"
     >
-      {site.title}
+      <span class="text-2xl font-black tracking-wider text-accent">
+        RQ
+      </span>
     </a>
     <nav
       id="nav-menu"
@@ -84,18 +86,18 @@ const isActive = (path: string) => {
         </li>
         <li class="col-span-2">
           <a
-            href={getRelativeLocaleUrl(locale, "tags")}
-            class:list={{ "active-nav": isActive("/tags") }}
+            href={getRelativeLocaleUrl(locale, "")}
+            class:list={{ "active-nav": isActive("/") }}
           >
-            {t.nav.tags}
+            {t.nav.about}
           </a>
         </li>
         <li class="col-span-2">
           <a
-            href={getRelativeLocaleUrl(locale, "about")}
-            class:list={{ "active-nav": isActive("/about") }}
+            href={getRelativeLocaleUrl(locale, "tags")}
+            class:list={{ "active-nav": isActive("/tags") }}
           >
-            {t.nav.about}
+            {t.nav.tags}
           </a>
         </li>
         {

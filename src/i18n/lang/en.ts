@@ -3,9 +3,9 @@ import type { UIStrings } from "../types";
 export default {
   nav: {
     home: "Home",
-    posts: "Posts",
+    posts: "Portofolio",
     tags: "Tags",
-    about: "About",
+    about: "CV",
     archives: "Archives",
     search: "Search",
   },
@@ -44,8 +44,8 @@ export default {
     tagsTitle: "Tags",
     tagsDesc: "All the tags used in posts.",
 
-    postsTitle: "Posts",
-    postsDesc: "All the articles I've posted.",
+    postsTitle: "Portofolio",
+    postsDesc: "All the projects and items in my portfolio.",
 
     archivesTitle: "Archives",
     archivesDesc: "All the articles I've archived.",
